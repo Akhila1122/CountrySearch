@@ -1,0 +1,214 @@
+:root {
+    --color-background: #f0f4f8;
+    --color-navbar: #1f2937;
+    --color-card-bg: #ffffff;
+    --color-modal-bg: #ffffff;
+    --color-primary: #2563eb;
+    --color-secondary: #d1d5db;
+    --color-text: #1f2937;
+    --color-light-text: #6b7280;
+    --color-highlight: #fca311;
+  }
+  
+  body {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background-color: var(--color-navbar);
+    color: #fff;
+  }
+  
+  .nav-item {
+    margin: 0 1rem;
+  }
+  
+  .nav-item select,
+  .nav-item input {
+    padding: 0.6rem 1rem;
+    border: 1px solid var(--color-secondary);
+    border-radius: 4px;
+    background: var(--color-card-bg);
+    color: var(--color-text);
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 2rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  
+  .grid-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  .grid-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .modal-content img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto;
+  }
+  
+  .grid-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    padding: 50px;
+
+  }
+  
+  .grid-item h3 {
+    text-align: center;
+  }
+  
+  .favorite-btn {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--color-primary);
+    color: #fff;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .favorite-btn:hover {
+    background-color: var(--color-highlight);
+  }
+  
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .modal.show {
+    display: flex;
+  }
+  
+  .modal-content {
+    background: var(--color-modal-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    color: var(--color-text);
+  }
+  
+  .modal-content img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .back-button {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--color-primary);
+    color: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .back-button:hover {
+    background-color: var(--color-highlight);
+  }
+  
+  .favorites {
+    background: var(--color-secondary);
+    color: var(--color-text);
+    padding: 1.5rem;
+    border-radius: 8px;
+    height: fit-content;
+  }
+  
+  .favorite-countries {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+  
+  .favorite-countries div {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+  
+  .favorite-countries img {
+    width: 36px;
+    height: 26px;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+  
+  .no-result {
+    display: none;
+    color: var(--color-highlight);
+    font-weight: 500;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+  
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .grid-container {
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .container {
+      width: 100%;
+    }
+  
+    .grid-container {
+      grid-template-columns: 1fr;
+    }
+  }
+  

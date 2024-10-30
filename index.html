@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Country Search & Filter App</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-item">
+            <input type="search" id="search" placeholder="Search country" />
+            <div class="suggestions"></div>
+        </div>
+        <div class="nav-item">
+            <select id="region-filter">
+                <option value="All">All Regions</option>
+            </select>
+        </div>
+        <div class="nav-item">
+            <select id="language-filter">
+                <option value="All">All Languages</option>
+            </select>
+        </div>
+        <div class="nav-item">
+            <button id="favorites-btn">Favorites</button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="grid-container"></div>
+        <div class="no-result">No result found.</div>
+
+        <div class="modal">
+            <div class="modal-content">
+                <figure>
+                    <img src="" alt="" />
+                    <figcaption>Country Name</figcaption>
+                </figure>
+                <div class="country-details">
+                    <p><strong>Top Level Domain:</strong> <span id="tld"></span></p>
+                    <p><strong>Capital:</strong> <span id="capital"></span></p>
+                    <p><strong>Region:</strong> <span id="region"></span></p>
+                    <p><strong>Population:</strong> <span id="population"></span></p>
+                    <p><strong>Area:</strong> <span id="area"></span></p>
+                    <p><strong>Languages:</strong> <span id="languages"></span></p>
+                </div>
+                <a href="#" class="back-button">Back</a>
+            </div>
+        </div>
+
+        <div class="favorites">
+            <h3>Your Favorites</h3>
+            <div class="favorite-countries"></div>
+        </div>
+    </div>
+</body>
+</html>
